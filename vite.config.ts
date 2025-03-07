@@ -6,7 +6,7 @@ export default defineConfig(({ command, mode }) => {
     return {
       build: {
         lib: {
-          entry: 'src/index.ts',
+          entry: 'src/server/app.ts',
           name: 'types',
           formats: ['es']
         }
