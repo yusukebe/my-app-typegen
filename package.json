@@ -1,0 +1,14 @@
+{
+  "name": "my-app-typegen",
+  "type": "module",
+  "scripts": {
+    "typegen": "vite build --mode typegen"
+  },
+  "dependencies": {
+    "hono": "^4.7.4"
+  },
+  "devDependencies": {
+    "vite": "^6.2.1",
+    "vite-plugin-dts": "^4.5.3"
+  }
+}
