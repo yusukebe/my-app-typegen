@@ -1,29 +1,11 @@
+// vite.config.ts
 import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
+import typegenPlugin from './vite-plugin'
 
-export default defineConfig(({ command, mode }) => {
-  if (command === 'build' && mode === 'typegen') {
-    return {
-      build: {
-        lib: {
-          entry: 'src/server/app.ts',
-          name: 'types',
-          formats: ['es']
-        }
-      },
-      plugins: [
-        dts({
-          outDir: '.hono/types',
-          declarationOnly: true,
-          beforeWriteFile: (filePath) => {
-            const newPath = filePath.replace(/(^\/.+\/)([^/]+\.d\.ts)$/, '$1+types/$2')
-            return {
-              filePath: newPath
-            }
-          }
-        })
-      ]
-    }
-  }
-  return {}
+export default defineConfig({
+  plugins: [
+    typegenPlugin({
+      entry: './src/server/app.ts'
+    })
+  ]
 })
