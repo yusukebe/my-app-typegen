@@ -2,7 +2,7 @@ import type { Plugin } from 'vite'
 import dts from 'vite-plugin-dts'
 import { resolve } from 'node:path'
 
-interface TypegenOptions {
+export type TypegenOptions = {
   entry?: string
   outDir?: string
   include?: string[]
