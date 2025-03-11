@@ -1,4 +1,4 @@
-import { Plugin } from 'vite'
+import type { Plugin } from 'vite'
 import dts from 'vite-plugin-dts'
 import { resolve } from 'node:path'
 
