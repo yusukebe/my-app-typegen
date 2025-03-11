@@ -5,14 +5,5 @@ import typegenPlugin from './vite-plugin'
 const entry = './src/server/app.ts'
 
 export default defineConfig({
-  plugins: [
-    devServer({
-      entry
-    }),
-    typegenPlugin({
-      entry,
-      watchDirs: ['./src/server'],
-      enableWatch: true
-    })
-  ]
+  plugins: [devServer({ entry }), typegenPlugin({ entry })]
 })
