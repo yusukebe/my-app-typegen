@@ -14,8 +14,7 @@ export const defaultOption: Required<TypegenOptions> = {
   outDir: '.hono/types/src',
   include: ['./src/**/*.ts', './src/**/*.tsx'],
   beforeWriteFile: (filePath: string) => {
-    const newPath = filePath.replace(/(^\/.+\/)([^/]+\.d\.ts)$/, '$1+types/$2')
-    return { filePath: newPath }
+    return { filePath }
   }
 }
 

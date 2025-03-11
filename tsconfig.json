@@ -10,9 +10,13 @@
     "strict": true,
     "skipLibCheck": true,
     "rootDirs": [
-      ".",
-      "./.hono/types"
+      "."
     ],
+    "paths": {
+      "+types/*": [
+        "./.hono/types/src/*"
+      ]
+    },
     "lib": [
       "ESNext"
     ],
