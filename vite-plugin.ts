@@ -20,8 +20,7 @@ export const defaultOption: Required<TypegenOptions> = {
 }
 
 /**
- * Creates a Vite plugin that generates TypeScript declaration files.
- * Supports both build mode and development mode with file watching.
+ * Vite plugin that generates TypeScript declaration files.
  */
 export function typegenPlugin(options: TypegenOptions): Plugin[] {
   const entry = options.entry ?? defaultOption.entry
