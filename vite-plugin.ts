@@ -11,7 +11,7 @@ export type TypegenOptions = {
 
 export const defaultOption: Required<TypegenOptions> = {
   entry: 'src/index.ts',
-  outDir: '.hono/types/src',
+  outDir: '.typegen/src',
   include: ['./src/**/*.ts', './src/**/*.tsx'],
   beforeWriteFile: (filePath: string) => {
     return { filePath }
@@ -51,8 +51,7 @@ export function typegenPlugin(options: TypegenOptions): Plugin[] {
               lib: {
                 entry: resolve(process.cwd(), entry),
                 name: 'typegen',
-                formats: ['es'],
-                fileName: () => 'temp.js'
+                formats: ['es']
               }
             }
           }

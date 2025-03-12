@@ -1,4 +1,5 @@
 .hono/
+.typegen/
 bun.lock
 package-lock.json
 

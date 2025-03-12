@@ -1,7 +1,6 @@
 {
   "include": [
-    "**/*",
-    "./.hono/types/**/*"
+    "**/*"
   ],
   "compilerOptions": {
     "target": "ESNext",
@@ -14,7 +13,7 @@
     ],
     "paths": {
       "+types/*": [
-        "./.hono/types/src/*"
+        "./.typegen/src/*"
       ]
     },
     "lib": [
